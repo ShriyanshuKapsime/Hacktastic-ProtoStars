@@ -1,0 +1,21 @@
+{
+  "name": "rural-market-sim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test-run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShriyanshuKapsime/Hacktastic-ProtoStars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ShriyanshuKapsime/Hacktastic-ProtoStars/issues"
+  },
+  "homepage": "https://github.com/ShriyanshuKapsime/Hacktastic-ProtoStars#readme"
+}

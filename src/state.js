@@ -1,34 +1,32 @@
 // src/state.js
 
 export const gameState = {
-    // 1. The Economy Module (Managed by You & Nitish)
     economy: {
-        capital: 5000,           // Starting money in ₹
-        loan: 0,                 // Outstanding debt
+        capital: 5000,
+        loan: 0,
         marketPrices: {
-            tomato: 20,          // ₹ per kg
-            wheat: 40,
-            rice: 30,
-            tomato_puree: 80     // Processed goods have higher value
+            cabbage: 30,  // Spring
+            tomato: 20,   // Summer
+            pumpkin: 60,  // Autumn
+            wheat: 40     // Autumn/Winter
         }
     },
 
-    // 2. The Inventory Module (Managed by You & Nitish)
     inventory: [
-        { id: 'tomato', name: 'Raw Tomatoes', qty: 0, spoilageRate: 0.20 }, // 20% rots per turn
-        { id: 'wheat', name: 'Wheat Grain', qty: 0, spoilageRate: 0.05 },   // 5% rots per turn
-        { id: 'rice', name: 'Raw Rice', qty: 0, spoilageRate: 0.05 },
-        { id: 'tomato_puree', name: 'Tomato Puree', qty: 0, spoilageRate: 0.02 } // Processed = lasts longer
+        { id: 'cabbage', name: 'Cabbage', qty: 0, spoilageRate: 0.15, seedPrice: 15, seasons: ['Spring'] },
+        { id: 'tomato', name: 'Tomatoes', qty: 0, spoilageRate: 0.20, seedPrice: 10, seasons: ['Summer'] },
+        { id: 'pumpkin', name: 'Pumpkins', qty: 0, spoilageRate: 0.10, seedPrice: 30, seasons: ['Autumn'] },
+        // Wheat is hardy, it can grow in two seasons!
+        { id: 'wheat', name: 'Wheat Grain', qty: 0, spoilageRate: 0.05, seedPrice: 20, seasons: ['Autumn', 'Winter'] }
     ],
 
-    // 3. The World Module (Managed by Krish)
     world: {
         currentTurn: 1,
-        season: 'Sowing',        // Sowing, Growing, Harvest, Lean
-        weather: 'Sunny',        // Sunny, Rainy, Stormy, Drought
-        weatherModifier: 1.0     // 1.0 is normal. 1.5 increases spoilage (e.g., Rainy)
+        season: 'Spring', // Start in Spring like Stardew!
+        weather: 'Sunny',
+        weatherModifier: 1.0,
+        turnsInCurrentState: 0
     },
 
-    // 4. The Telemetry Module (For the AI Agent later)
-    telemetry: [] 
+    telemetry: []
 };
